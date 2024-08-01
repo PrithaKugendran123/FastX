@@ -1,0 +1,98 @@
+.panel {
+    border-radius: 15px;
+    margin-top: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 500px; /* Adjusted width */
+    margin-left: auto; /* Center the panel horizontally */
+    margin-right: auto;
+    height: 350px;
+}
+
+.panel-heading {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.panel-heading h3 {
+    font-size: 24px;
+}
+
+.panel-body {
+    padding: 20px;
+}
+
+
+.input-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-field input {
+    flex: 1;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-left: 10px;
+    outline: none;
+    padding-top: 20px;
+}
+
+.input-field .fa {
+    font-size: 20px;
+}
+
+.btn.custom-navbar {
+    background-color: rgba(244, 110, 61, 0.925);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn.custom-navbar:hover {
+    background-color: #ff8b7d;
+}
+
+.text-danger {
+    font-size: 12px;
+}
+
+.text-muted {
+    font-size: 14px;
+}
+
+.text-coral {
+    color:  coral;
+}
+
+.bg-coral {
+    background-color: coral;
+}
+
+.btn-coral {
+    background-color: coral;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 40px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    width: 400px;
+    margin-left: auto; /* Move the button to the right */
+    margin-right: auto;
+    display: block;
+    
+}
+
+.btn-coral:hover {
+    background-color: rgb(248, 111, 61);
+}
+
+.btn-coral:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 111, 97, 0.4);
+}
+
+

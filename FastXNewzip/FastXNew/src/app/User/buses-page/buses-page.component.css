@@ -1,0 +1,195 @@
+/* Seat container styling */
+.seat-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Start from the left */
+}
+
+/* Style for individual seat box */
+.seat-box {
+  width: calc(20% - 10px); /* Set width to 20% to accommodate five seats per row with 10px margin */
+  box-sizing: border-box; /* Include padding and border in the width */
+  padding: 5px; /* Adjust padding as needed */
+}
+.status-images {
+  padding-bottom: 50px;
+
+  padding-right: 300px; /* Add padding to create a gap */
+}
+.image{
+  padding-left: 15px;
+}
+.pol{
+  padding-left: 0px;
+}
+/* Seat images styling */
+.seat img {
+  width: 30%; /* Ensure images fill the seat box */
+  height: auto;
+  margin-right: 0;
+   /* Remove margin between seat images */
+}
+
+
+/* Selected seat image with light green border */
+.seat.selected img {
+  border: 2px solid lightgreen; /* Light green border for selected seats */
+}
+
+/* Hover effect for seat images */
+.seat:hover img {
+  opacity: 0.8; /* Reduce opacity on hover */
+}
+
+/* Hover effect for selected seat images */
+.seat.selected:hover img {
+  opacity: 1; /* Restore full opacity on hover for selected seats */
+}
+
+/* Disabled seat images */
+.seat.disabled img {
+  opacity: 0.5; /* Reduce opacity for disabled seats */
+  pointer-events: none; /* Disable pointer events on disabled seats */
+}
+
+.bus-listings-box {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Make the box relative to position the button */
+}
+
+/* Style for individual bus box */
+.bus-box {
+  margin-bottom: 20px;
+  padding-right: 5px;
+}
+
+/* Style for the bus details box */
+.bus-details-box {
+  border-radius: 2%;
+  padding-left: 30px;
+ 
+}
+
+/* Style for the filter box */
+.filter-box {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  padding: 15px;
+ 
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the filter box header */
+.filter-box h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-left: 4px;
+}
+
+/* Style for the filter container */
+.filter-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-left: 4px;
+  /* Add some space between filter containers */
+}
+
+/* Style for the filter labels */
+.filter-container label {
+  margin-right: 10px;
+  padding-top: 5px; /* Adjust as needed */
+}
+
+/* Style for the select boxes */
+.form-select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  appearance: none;
+}
+
+/* Style for the bus type filter */
+.bustype {
+  padding-top: 5px;
+  padding-right: 20px;
+}
+
+/* Style for the seat type filter */
+.seattype {
+  padding-top: 5px;
+  padding-right: 20px;
+}
+
+/* Style for the button container */
+.button-container {
+  position: absolute;
+  top: 90px;
+  right: 20px;
+}
+.button-container-ticket {
+  position: absolute;
+  top: 150px;
+  right: 20px;
+}
+.additional-image{
+  padding-top: 90px;
+  padding-left:600px
+}
+/* Add coral color to the "Available Buses for this Route" header */
+h2 {
+  color: coral; /* Coral color */
+}
+
+/* Add coral color to the "Make Payment" button */
+.btn-primary {
+  background-color: coral; /* Coral color */
+  border: none;
+}
+
+/* Hover effect for the "Make Payment" button */
+.btn-primary:hover {
+  background-color: #dc5b5b; /* Darker coral color on hover */
+}
+
+/* Add coral color to the background of the filter box */
+.filter-box {
+  background-color:white;
+  border-color: coral; /* Coral color */
+}
+
+/* Add coral color to the border of the bus details box */
+.bus-details-box {
+  border: 1px solid coral; /* Coral color border */
+}
+
+/* Add coral color to the border of the bus list box */
+.bus-listings-box {
+  border: 1px solid coral; /* Coral color border */
+}
+
+/* Add coral color to the dropdown toggle text */
+.dropdown-toggle {
+  color: coral; /* Coral color */
+}
+
+/* Add coral color to the background of dropdown menus */
+.dropdown-menu {
+  background-color: rgb(236, 230, 228); /* Coral color background */
+}
+
+/* Add coral color to the dropdown headers */
+.dropdown-header {
+  color: #fff; /* White color for dropdown headers */
+  background-color: coral; /* Coral color background */
+}
+
+/* Add coral color to the divider in dropdown menus */
+.dropdown-divider {
+  background-color: coral; /* Coral color */
+}

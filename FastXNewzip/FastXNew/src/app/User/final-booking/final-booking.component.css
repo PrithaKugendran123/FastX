@@ -1,0 +1,52 @@
+.booking-details-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.booking-details-heading {
+  text-align: center;
+  color: #333;
+}
+
+.booking-section {
+  background-color: coral;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Increased opacity for darker shadow */
+}
+
+.summary-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.bus-details p,
+.schedule-details p {
+  color: #333; /* Black text color */
+}
+
+.section-heading {
+  margin-top: 0;
+  color: #555;
+}
+
+.confirm-button-container {
+  text-align: center;
+}
+
+.confirm-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.confirm-button:hover {
+  background-color: #0056b3;
+}
+
+.confirm-button:focus {
+  outline: none;
+}

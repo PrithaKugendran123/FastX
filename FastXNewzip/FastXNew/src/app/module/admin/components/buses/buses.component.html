@@ -1,0 +1,88 @@
+<div class="container">
+  <div class="table-wrapper">
+    <h2 class="textt">Bus List</h2>
+    <table class="table table-warning table-striped table-hover bus-table">
+      <thead>
+        <tr>
+          <th>Bus Number</th>
+          <th>Bus Name</th>
+          <th>Seat Type</th>
+          <th>Bus Type</th>
+          <th>Pick Up</th>
+          <th>Drop Point</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bus of buses" class="bus-item">
+          <td>{{ bus.BusNumber }}</td>
+          <td>{{ bus.BusName }}</td>
+          <td>{{ bus.SeatType }}</td>
+          <td>{{ bus.BusType }}</td>
+          <td>{{ bus.PickUp }}</td>
+          <td>{{ bus.DropPoint }}</td>
+          <td><button class="btn edit-button" (click)="selectBus(bus)">Edit</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Add/Edit Bus</h2>
+  <form *ngIf="isEditing" (ngSubmit)="updateBus()" class="edit-form">
+      <div class="form-group">
+        <label>Bus Number</label>
+        <input type="text" [(ngModel)]="selectedBus.BusNumber" name="BusNumber" required>
+      </div>
+      <div class="form-group">
+        <label>Bus Name</label>
+        <input type="text" [(ngModel)]="selectedBus.BusName" name="BusName" required>
+      </div>
+      <div class="form-group">
+        <label>Seat Type</label>
+        <input type="text" [(ngModel)]="selectedBus.SeatType" name="SeatType" required>
+      </div>
+      <div class="form-group">
+        <label>Bus Type</label>
+        <input type="text" [(ngModel)]="selectedBus.BusType" name="BusType" required>
+      </div>
+      <div class="form-group">
+        <label>Pick Up</label>
+        <input type="text" [(ngModel)]="selectedBus.PickUp" name="PickUp" required>
+      </div>
+      <div class="form-group">
+        <label>Drop Point</label>
+        <input type="text" [(ngModel)]="selectedBus.DropPoint" name="DropPoint" required>
+      </div>
+      <button type="submit" class="btn submit-button">Update Bus</button>
+      <button type="button" (click)="cancelEdit()" class="btn cancel-button">Cancel</button>
+    </form>
+  
+    <form *ngIf="!isEditing" (ngSubmit)="addBus()" class="add-form">
+      <div class="form-group">
+        <label>Bus Number</label>
+        <input type="text" [(ngModel)]="selectedBus.BusNumber" name="BusNumber" required>
+      </div>
+      <div class="form-group">
+        <label>Bus Name</label>
+        <input type="text" [(ngModel)]="selectedBus.BusName" name="BusName" required>
+      </div>
+      <div class="form-group">
+        <label>Seat Type</label>
+        <input type="text" [(ngModel)]="selectedBus.SeatType" name="SeatType" required>
+      </div>
+      <div class="form-group">
+        <label>Bus Type</label>
+        <input type="text" [(ngModel)]="selectedBus.BusType" name="BusType" required>
+      </div>
+      <div class="form-group">
+        <label>Pick Up</label>
+        <input type="text" [(ngModel)]="selectedBus.PickUp" name="PickUp" required>
+      </div>
+      <div class="form-group">
+        <label>Drop Point</label>
+        <input type="text" [(ngModel)]="selectedBus.DropPoint" name="DropPoint" required>
+      </div>
+      <button type="submit" class="btn submit-button">Add Bus</button>
+    </form>
+  </div>
+  

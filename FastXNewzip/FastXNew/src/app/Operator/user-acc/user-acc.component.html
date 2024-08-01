@@ -1,0 +1,33 @@
+<app-dash></app-dash>
+<div class="table-wrapper">
+  <h1 class="textt"> User Details</h1>
+    <table class="table table-warning table-striped table-hover text-bg-primary">
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Contact Number</th>
+          <th>Address</th>
+          <th>Email</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of objsrv.ulist">
+          <td>{{ user.UserId }}</td>
+          <td>{{ user.Name }}</td>
+          <td>{{ user.Gender }}</td>
+          <td>{{ user.ContactNumber }}</td>
+          <td>{{ user.Address }}</td>
+          <td>{{ user.Email }}</td>
+          <td>
+            <button class="btn btn-sm btn-danger" (click)="delRecord(user.UserId)">
+              <i class="fa fa-trash"></i> <!-- Add the trash icon -->
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

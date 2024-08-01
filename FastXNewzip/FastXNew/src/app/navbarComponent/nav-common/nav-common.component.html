@@ -1,0 +1,76 @@
+<style>
+    .dropdown-menu {
+      opacity: 0; /* Initially hide the dropdown menu */
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition for opacity and visibility */
+    }
+  
+    .dropdown-menu.show {
+      opacity: 1; /* Show the dropdown menu with a smooth transition */
+      visibility: visible;
+    }
+    .navbar{
+      margin-bottom: 30px;
+    }
+  </style>
+  
+  <!-- JavaScript to handle smooth transitions -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var dropdownToggle = document.querySelector('.dropdown-toggle');
+      var dropdownMenu = document.querySelector('.dropdown-menu');
+  
+      dropdownToggle.addEventListener('click', function () {
+        dropdownMenu.classList.toggle('show'); // Toggle the 'show' class to display/hide the dropdown menu
+      });
+  
+      // Close dropdown menu when clicking outside of it
+      document.addEventListener('click', function (event) {
+        if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+          dropdownMenu.classList.remove('show'); // Hide the dropdown menu if the click is outside of it
+        }
+      });
+    });
+  </script>
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+
+  <div class="container">
+      <a class="navbar-brand" routerLink="/"> <img src="../assets/images/logo.png">FastX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                 <a class="nav-link font" routerLink="/">Home</a>
+
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font" routerLink="/login">Login</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link font" routerLink="/about">About Us</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link font" routerLink="/contact">Contact Us</a>
+              </li>
+              
+          </ul>
+          <!-- Combined Login Dropdown Menu -->
+          <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle font" href="#" id="navbarDropdownMenuLink" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Admin/Operator
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      
+                      <li><a class="dropdown-item " routerLink="/admin-login">Admin Login</a></li>
+                      <li><a class="dropdown-item" routerLink="/operator-login">Operator Login</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>

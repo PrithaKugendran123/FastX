@@ -1,0 +1,68 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <input type="hidden" name="ID" [value]="objservice.ppData.SeatId">
+
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fa fa-user-circle-o" 
+                       aria-hidden="true" 
+                       [class.green-icon]="BusId.valid" 
+                       [class.red-icon]="BusId.invalid && BusId.touched"></i>
+                    <input name="BusId" 
+                           #BusId="ngModel" 
+                           [(ngModel)]="objservice.ppData.BusId" 
+                           placeholder="BusId" 
+                           class="form-control" 
+                           required>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fa fa-diamond" 
+                       aria-hidden="true" 
+                       [class.green-icon]="SeatNumber.valid" 
+                       [class.red-icon]="SeatNumber.invalid && SeatNumber.touched"></i>
+                       <input name="SeatNumber"
+                       #SeatNumber="ngModel"
+                       [(ngModel)]="objservice.ppData.SeatNumber"
+                       placeholder="SeatNumber"
+                       class="form-control"
+                       required>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text bg-white">
+                    <i class="fa fa-compass"
+                       aria-hidden="true"
+                       [class.green-icon]="IsAvailable.valid"
+                       [class.red-icon]="IsAvailable.invalid && IsAvailable.touched">
+                    </i>
+    
+                    <input type="checkbox" 
+                    name="IsAvailable" 
+                    #IsAvailable="ngModel"
+                    [(ngModel)]="objservice.ppData.IsAvailable" 
+                    class="form-check-input" 
+                    id="IsAvailable">
+                    <label class="form-check-label" for="IsAvailable">Is Available</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-success btn-lg" type="submit" [disabled]="form.invalid">
+            <i class="fa fa-database"></i> Insert/Update Seat
+        </button>
+    </div>
+</form>

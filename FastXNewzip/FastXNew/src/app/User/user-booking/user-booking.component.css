@@ -1,0 +1,83 @@
+/* Updated brand styling */
+.brand-text {
+  font-size: 24px;
+  color:  rgba(244, 110, 61, 0.925);
+  font-weight: bolder;
+}
+.form-select,
+.form-control {
+  width: 100%;
+}
+.textt{
+  padding-left: 15px;
+  font-size: 50px;
+  padding-top: 0px;
+}
+.container{
+  color: rgba(244, 110, 61, 0.925);
+  font-weight: bolder;
+  
+}/* Button styles */
+.btn-search {
+  background-color: coral;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.btn-search:hover {
+  background-color: red;
+}
+
+.bbt{
+  padding-top: 70px;
+  padding-left: 400px;
+  font-size: 50px;
+
+}
+/* Added padding to form elements */
+.form-select,
+.form-control {
+  padding: 10px;
+}
+
+/* Adjusted border radius of form elements */
+.form-select,
+.form-control {
+  border-radius: 10px;
+}
+
+/* Adjusted search button styling */
+.btn-search {
+  background-color: coral;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Optional: Added hover effect to search button */
+.btn-search:hover {
+  background-color: rgb(245, 100, 47)
+}
+.form-label{
+  font-size: larger;
+  
+}
+.rou{
+  padding-left: 555px;
+  padding-top: 20px;
+  color:coral;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+}
+.images {
+  height: 300px;
+  width: 500px;
+  margin: 0 auto;
+  display: block; 
+}

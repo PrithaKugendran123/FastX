@@ -1,0 +1,59 @@
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: rgba(200, 70, 30, 0.925);
+  color: white; 
+}
+.no-bookings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh; /* Set the height of the container to the full viewport height */
+}
+.nobook{
+  margin-left: 500px;
+  margin-top: 30px;
+}
+.no{
+  margin-left: 550px;
+  margin-top: 30px;
+}
+.navbtn{
+  margin-top: 30px;
+  margin-left: 600px;
+}
+.button {
+  
+  justify-content: center;
+  margin-left: 600px;
+  padding:20px;/* Add some space between the message and the button */
+}
+
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; 
+}
+
+tbody tr:hover {
+  background-color: #ddd; 
+}
+
+
+
+@media (max-width: 600px) {
+  th, td {
+    font-size: 12px;
+  }
+}

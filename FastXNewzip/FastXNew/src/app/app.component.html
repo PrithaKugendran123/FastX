@@ -1,0 +1,67 @@
+<app-nav-common *ngIf="!isAdminLoggedIn && !isCustomerLoggedIn && !isOperatorLoggedIn"></app-nav-common>
+<app-nav-ad *ngIf="isAdminLoggedIn && !isCustomerLoggedIn && !isOperatorLoggedIn"></app-nav-ad>
+<app-nav *ngIf="isCustomerLoggedIn && !isAdminLoggedIn && !isOperatorLoggedIn"></app-nav>
+<!-- <app-dash *ngIf="isOperatorLoggedIn && !isAdminLoggedIn && !isCustomerLoggedIn"></app-dash> -->
+
+<!-- <div class="header-top">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6 logo">
+            <img src="../assets/imag/logo.png" alt="">
+           
+          </div>
+          <div class="col-md-6 text-end">
+            <h3 style="color: coral;">
+              FastX-Get Your Bus here
+            </h3>
+          </div>
+        </div>
+      </div>
+      
+</div> -->
+<!-- <div style="width: 100%; height: 2px; background-color: coral;"></div>-->
+
+<router-outlet></router-outlet>
+
+ <!--Footer 
+ <div class="container text-center grid">
+  <div class="row">
+    <div class="col">
+      <img src="../../../assets/images/bus1.jpeg" alt="">
+    </div>
+    <div class="col">
+      <img src="../../../assets/images/bus2.jpeg" alt="">
+    </div>
+    <div class="col">
+      <img src="../../../assets/images/bus3.jpeg" alt="">
+    </div>
+   
+  </div>
+</div>
+<!-- Footer -->
+<!--<footer class="footer">
+  <div class="container buy">
+    <div class="row mt-5 mb-5">
+      
+
+      <div class="col-md-6">
+        <div class="card card-body block">
+          <div id="why_buy">                            
+            <div class="info_right">
+              <h5 class="text-center mb-3">Why buy tickets from us?</h5>
+              <ul>
+                <li><i class="fas fa-check mr-2" style="color:#F69230;font-size:17px;"></i><b>Buy bus tickets</b> anytime from anywhere</li>
+                <li><i class="fas fa-check mr-2" style="color:#F69230;font-size:17px;"></i>Pay by credit card, mobile banking, or cash</li>
+                <li><i class="fas fa-check mr-2" style="color:#F69230;font-size:17px;"></i>Get tickets delivered to your doorstep</li>
+                <li><i class="fas fa-check mr-2" style="color:#F69230;font-size:17px;"></i>Dependable customer service <b>(8 AM to 11 PM)</b></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pt-5 mb-5 justify-content-center">
+      <img src="../assets/images/sslcommerz_logo.png" class="img-fluid" alt="">
+    </div>
+  </div>
+</footer> -->

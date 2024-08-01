@@ -1,0 +1,71 @@
+<!-- <div>
+  <app-display></app-display>
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <input type="hidden" name="ID" [value]="objservice.bppData.RouteId">
+    
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <i class="fa fa-user-circle-o" 
+               aria-hidden="true" 
+               [class.green-icon]="Origin.valid" 
+               [class.red-icon]="Origin.invalid && Origin.touched"></i>
+            <input name="Origin" 
+                   #Origin="ngModel" 
+                   [(ngModel)]="objservice.bppData.Origin" 
+                   placeholder="Origin" 
+                   class="form-control" 
+                   required>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <i class="fa fa-diamond" 
+               aria-hidden="true" 
+               [class.green-icon]="Destination.valid" 
+               [class.red-icon]="Destination.invalid && Destination.touched"></i>
+            <input name="Destination" 
+                   #Destination="ngModel" 
+                   [(ngModel)]="objservice.bppData.Destination" 
+                   placeholder="Destination" 
+                   class="form-control" 
+                   required>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-white">
+            <i class="fa fa-calendar" 
+               aria-hidden="true" 
+               [class.green-icon]="TravelDate.valid"
+               [class.red-icon]="TravelDate.invalid && TravelDate.touched"></i>
+            <input name="TravelDate" 
+                   #TravelDate="ngModel" 
+                   [(ngModel)]="objservice.bppData.TravelDate"
+                   placeholder="YY/MM/DD" 
+                   class="form-control" 
+                   required>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <button class="btn btn-success btn-lg" type="submit" [disabled]="form.invalid">
+        <i class="fa fa-database"></i>Update bus routes
+      </button>
+    </div>
+  </form>
+  
+</div>
+   -->

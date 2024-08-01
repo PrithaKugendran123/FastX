@@ -1,0 +1,75 @@
+/* booking.component.css */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 1px; 
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.table-wrapper table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-wrapper th, .table-wrapper td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.textt {
+  color: coral;
+  padding-left: 500px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.table-wrapper th {
+  background-color: rgba(244, 110, 61, 0.925);
+  color: white;
+  font-weight: bold;
+}
+
+.table-wrapper tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table-wrapper tbody tr:hover {
+  background-color: #ddd;
+}
+
+.table-wrapper th,
+.table-wrapper td {
+  position: relative;
+}
+
+.table-wrapper th:before,
+.table-wrapper td:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(145deg, #ffffff, #d9d9d9);
+  z-index: -1;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.table-wrapper th:first-child:before,
+.table-wrapper td:first-child:before {
+  border-radius: 10px 0 0 10px;
+}
+
+.table-wrapper th:last-child:before,
+.table-wrapper td:last-child:before {
+  border-radius: 0 10px 10px 0;
+}
+
+@media (max-width: 600px) {
+  .table-wrapper th,
+  .table-wrapper td {
+    font-size: 12px;
+  }
+}

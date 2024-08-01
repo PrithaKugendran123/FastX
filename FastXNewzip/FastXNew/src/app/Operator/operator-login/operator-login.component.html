@@ -1,0 +1,34 @@
+<div class="outer">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="panel border rounded bg-white shadow-lg">
+                    <div class="panel-heading bg-coral text-white py-3">
+                        <h3 class="font-weight-bold mb-0 text-center">Operator Login</h3>
+                    </div>
+                    <div class="panel-body p-4">
+                        <form [formGroup]="loginForm" (ngSubmit)="login()">
+                            <div class="form-group">
+                                <div class="input-field">
+                                    <span class="input-group-text bg-transparent border-right-0"><i class="fa fa-user"></i></span>
+                                    <input formControlName="Email" type="text" class="form-control rounded-0" placeholder="Email" required>
+                                </div>
+                                <small *ngIf="loginForm.controls['Email'].dirty && loginForm.hasError('required','Email')" class="text-danger">*Email is required*</small>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-field">
+                                    <span class="input-group-text bg-transparent border-right-0"><i class="fa fa-lock"></i></span>
+                                    <input formControlName="Password" [type]="type" class="form-control rounded-0" placeholder="Password" required>
+                                    <button type="button" (click)="hideShowPass()" class="btn bg-transparent text-muted border-left-0"><i class="fa {{eyeIcon}}"></i></button>
+                                </div>
+                                <small *ngIf="loginForm.controls['Password'].dirty && loginForm.hasError('required','Password')" class="text-danger">*Password is required*</small>
+                            </div>
+                            <button type="submit" class="btn btn-coral btn-block mt-4 rounded-0">Login</button>
+                        </form>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

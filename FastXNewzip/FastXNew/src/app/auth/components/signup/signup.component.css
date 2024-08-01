@@ -1,0 +1,81 @@
+.outer {
+  margin-top: 50px;
+}
+.panel-heading h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white; /* Change text color to white */
+}
+
+.panel {
+  min-height: 70px;
+
+  border-radius: 25px;
+  background-color: coral; 
+}
+
+.panel-body {
+  padding: 20px; /* Add padding for better readability */
+}
+
+
+.input-field {
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.input-field.error {
+  border-color: red;
+}
+
+.input-field input[type='text'],
+.input-field input[type='password'] {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.btn {
+  margin-top: 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-danger {
+  background-color: coral;
+  border-color: coral;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #ff6b6b; /* Lighten coral color on hover */
+  border-color: #ff6b6b;
+}
+
+.text-muted a {
+  text-decoration: none;
+  color: coral;
+  transition: color 0.3s ease;
+}
+
+.text-muted a:hover {
+  text-decoration: underline;
+  color: #ff6b6b; /* Lighten link color on hover */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pt-3 {
+  padding-top: 20px;
+}
+
+.pt-4 {
+  padding-top: 25px;
+}

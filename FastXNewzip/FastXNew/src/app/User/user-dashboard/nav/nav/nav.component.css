@@ -1,0 +1,50 @@
+/* Set height and width for all images */
+img {
+  height: 40px;
+  width: 40px;
+}
+
+/* Custom class for bold text with larger font size and white color */
+.custom {
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+/* Background color for specific elements */
+.bg {
+  background-color: rgba(244, 110, 61, 0.925);
+}
+
+/* Padding for specific elements */
+.fast {
+  padding-left: 40px;
+  padding-right: 10px;
+}
+
+/* Styling for dropdown menu */
+.dropdown-menu {
+  background-color: #f8f9fa; /* Background color of the dropdown menu */
+  border: none; /* Remove border */
+  padding: 0.5rem 0; /* Add padding */
+  border-radius: 0.25rem; /* Add border radius */
+}
+
+/* Styling for dropdown menu items */
+.dropdown-menu .dropdown-item {
+  color: #343a40; /* Text color for dropdown items */
+  font-size: medium; /* Larger font size */
+  padding: 8px 10px; /* Padding for dropdown items */
+}
+
+/* Hover effect for dropdown items */
+.dropdown-menu .dropdown-item:hover {
+  background-color: #007bff; /* Hover background color */
+  color: white; /* Text color on hover */
+}
+
+/* Active item in dropdown menu */
+.dropdown-menu .dropdown-item.active {
+  background-color: #007bff; /* Active item background color */
+  color: white; /* Text color for active item */
+}

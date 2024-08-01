@@ -1,0 +1,58 @@
+/* booking.component.css */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 1px; 
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.table-wrapper table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-wrapper th, .table-wrapper td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.textt {
+  color: coral;
+  padding-left: 480px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color:  rgba(244, 110, 61, 0.925); 
+  color: white; 
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; 
+}
+
+tbody tr:hover {
+  background-color: #ddd; 
+}
+
+
+
+@media (max-width: 600px) {
+  th, td {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,36 @@
+<!-- 
+<table>
+    <thead>
+      <tr>
+        <th>Bus ID</th>
+        <th>Bus Number</th>
+        <th>Bus Name</th>
+        <th>Seat ID</th>
+        <th>Seat Number</th>
+        <th>Is available</th>
+        
+      
+        <th>Delete</th>
+         <th>Update</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let seat of seatWithBusDetails">
+        
+        <td *ngIf="seat.Bus">{{ seat.Bus.BusId }}</td>
+        <td *ngIf="seat.Bus">{{ seat.Bus.BusNumber }}</td>
+        <td *ngIf="seat.Bus">{{ seat.Bus.BusName }}</td>
+        <td>{{ seat.SeatId}}</td>
+        <td>{{ seat.SeatNumber }}</td>
+        <td>{{ seat.IsAvailable }}</td>
+        <td>
+          <i class="fa fa-trash red-icon" (click)="delRecord(seat.SeatId)"></i></td>
+          <td><i class="fa fa-edit green-icon" (click)="fillForm(seat)"></i></td>
+        
+   
+      </tr>
+    </tbody>
+  </table>
+  <app-seat-reg></app-seat-reg>
+   -->

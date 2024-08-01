@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+  <div class="container">
+      <a class="navbar-brand" href="#">Admin Dashboard</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link font" href="home">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle custom" href="#" id="navbarDropdown" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Admin's Action
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" routerLink="/buses">Buses Management</a></li>
+                    <li><a class="dropdown-item" routerLink="/user">View Customers</a></li>
+                    <li><a class="dropdown-item" routerLink="/busdis">Route Management</a></li>
+                    <li><a class="dropdown-item" routerLink="/opAcc">View Operators</a></li>
+                </ul>
+              </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                  <button class="btn btn-outline-light" (click)="logout()">Logout</button>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+<!-- <img src="../../../assets/images/bg bus.jpg" class="images"> -->

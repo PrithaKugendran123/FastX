@@ -1,0 +1,30 @@
+.grid{
+    border-radius: 0.9%;
+    border:2px solid coral;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height:200px;
+}
+.footer {
+    background-color: #f8f9fa;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .block {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  .buy{
+    padding-left: 400px;
+  }
+  .info_right ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .info_right ul li {
+    margin-bottom: 10px;
+  }
+  

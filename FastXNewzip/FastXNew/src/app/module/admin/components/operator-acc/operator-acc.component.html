@@ -1,0 +1,32 @@
+<h2 class="textt">Operator Account</h2>
+
+<div class="table-wrapper">
+<table class="table table-warning table-striped table-hover text-bg-primary">
+  <thead>
+    <tr>
+      <th>Operator ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Gender</th>
+      <th>Contact Number</th>
+      <th>Address</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let operator of operators">
+      <td>{{ operator.BusOperatorId }}</td>
+      <td>{{ operator.Name }}</td>
+      <td>{{ operator.Email }}</td>
+      <td>{{ operator.Gender }}</td>
+      <td>{{ operator.ContactNumber }}</td>
+      <td>{{ operator.Address }}</td>
+      
+      <td>
+        <button class="btn btn-danger" (click)="deleteOperator(operator.BusOperatorId)">Delete</button>
+       
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

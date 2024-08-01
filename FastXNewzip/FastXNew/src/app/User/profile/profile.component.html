@@ -1,0 +1,53 @@
+
+<div class="container-xl px-4 mt-4">
+  <div class="card mb-4">
+    <div class="card-header bg-dark text-white">Account Details</div> <!-- Added card header -->
+    <div class="card-body">
+      
+      <hr class="mt-0 mb-4">
+  <form [formGroup]="profileForm" (ngSubmit)="updateProfile()" class="profile-form">
+  <div class="card-body">
+      <label for="name">Name</label>
+      <input type="text" id="name" formControlName="Name"> <!-- Use formControlName="Name" -->
+      <div *ngIf="profileForm.get('Name').invalid && profileForm.get('Name').touched" class="error-message">
+        Name is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="Email">Email</label>
+      <textarea id="Email" formControlName="Email"></textarea> 
+      <div *ngIf="profileForm.get('Email').invalid && profileForm.get('Email').touched" class="error-message">
+       Email  is required
+      </div>
+    </div><div class="form-group">
+      <label for="Password">Password</label>
+      <input type="password" id="Password" formControlName="Password" class="form-control">
+      <div *ngIf="profileForm.get('Password').invalid && profileForm.get('Password').touched" class="error-message">
+        Password is required
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="ContactNumber">Contact Number</label>
+      <input type="tel" id="ContactNumber" formControlName="ContactNumber"> <!-- Use formControlName="ContactNumber" -->
+      <div *ngIf="profileForm.get('ContactNumber').invalid && profileForm.get('ContactNumber').touched" class="error-message">
+        Please enter a valid 10-digit contact number
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="address">Address</label>
+      <textarea id="address" formControlName="Address"></textarea> <!-- Use formControlName="Address" -->
+      <div *ngIf="profileForm.get('Address').invalid && profileForm.get('Address').touched" class="error-message">
+        Address is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="Gender">Gender</label>
+      <textarea id="gender" formControlName="Gender"></textarea> 
+      <div *ngIf="profileForm.get('Gender').invalid && profileForm.get('Gender').touched" class="error-message">
+       Gender  is required
+      </div>
+    </div>
+    <button type="submit" [disabled]="profileForm.invalid" class="btn btn-dark btn-block">Update Profile</button> <!-- Updated button -->
+  </form>

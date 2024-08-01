@@ -1,0 +1,27 @@
+<div class="container mt-5 booking-details-container">
+  <h2 class="booking-details-heading">Booking Summary</h2>
+  
+  <div class="booking-section">
+    <div *ngIf="busDetails || schedule" class="summary-card">
+      <div *ngIf="busDetails" class="bus-details">
+        <p><strong>Bus Name:</strong> {{ busDetails.buses.$values[0].BusName }}</p>
+        <p><strong>Bus Number:</strong> {{ busDetails.buses.$values[0].BusNumber }}</p>
+        <p><strong>Bus Type:</strong> {{ busDetails.buses.$values[0].BusType }}</p>
+        <p><strong>Seat Type:</strong> {{ busDetails.buses.$values[0].SeatType }}</p>  
+        <p><strong>PickUp Point:</strong> {{ busDetails.buses.$values[0].PickUp }}</p>
+        <p><strong>Dropping Point:</strong> {{ busDetails.buses.$values[0].DropPoint }}</p>
+        <p><strong>Selected Seat Number:</strong> {{ selectedSeatId }}</p>  
+      </div>
+
+      <div *ngIf="schedule" class="schedule-details">
+        <p><strong>Departure Time:</strong> {{ schedule.DepartureTime }}</p>
+        <p><strong>Arrival Time:</strong> {{ schedule.ArrivalTime }}</p>
+        <p><strong>Total Fare :</strong> {{ schedule.Fare }}</p>
+      </div>
+    </div>
+    
+    <div class="confirm-button-container">
+      <button (click)="confirmBooking()" class="btn btn-primary confirm-button">Proceed to Pay</button>
+    </div>
+  </div>
+</div>

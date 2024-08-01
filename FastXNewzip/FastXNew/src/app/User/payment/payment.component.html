@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Payment Details</h2>
+      <form #paymentForm="ngForm">
+        <div class="form-group">
+          <label for="paymentMethod">Payment Method:</label>
+          <select id="paymentMethod" name="paymentMethod" [(ngModel)]="paymentMethod" class="form-control" required>
+            <option value="">Select Payment Method</option>
+            <option value="Cash">Cash</option>
+            <option value="Debit">Debit</option>
+            <option value="Online">Online</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="accountDetails">Account Details:</label>
+          <input type="text" id="accountDetails" name="accountDetails" [(ngModel)]="accountDetails" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="paymentAmount">Payment Amount (₹):</label>
+          <div class="input-group">
+            <span class="input-group-text">₹</span>
+            <input type="number" id="paymentAmount" name="paymentAmount" [(ngModel)]="totalPrice" class="form-control">
+          </div>
+        </div>
+      
+        <div class="form-group">
+          <label for="transactionStatus">Transaction Status:</label>
+          <input type="text" id="transactionStatus" name="transactionStatus" [(ngModel)]="transactionStatus" class="form-control" required>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary" (click)="submitPayment()" [disabled]="!paymentForm.valid">Make Payment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

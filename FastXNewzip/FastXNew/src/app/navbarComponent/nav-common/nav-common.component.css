@@ -1,0 +1,12 @@
+img{
+    height:50px;
+    width:50px;
+}
+.custom-navbar {
+    background-color: rgba(244, 110, 61, 0.925); /* Replace 'your-color' with the desired color code */
+}
+.font {
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff; /* Set the text color to white or any other bright color */
+}

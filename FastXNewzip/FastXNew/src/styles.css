@@ -1,0 +1,17 @@
+
+
+
+.green-icon{
+    background-color: green;
+    color:white;
+}
+
+.red-icon{
+    background-color: red;
+    color:white;
+}
+body {
+    background-color: white;
+    color:black; /* Set text color to white for better readability on dark background */
+  }
+  

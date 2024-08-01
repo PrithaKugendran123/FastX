@@ -1,0 +1,36 @@
+<!-- booking.component.html -->
+<app-dash></app-dash>
+<div class="table-wrapper">
+  <h1 class="textt"> Booking Details</h1>
+ 
+
+<div *ngIf="bookingWithBusDetails">
+  <table class="table table-warning table-striped table-hover text-bg-primary">
+    <thead>
+      <tr>
+        <th>Booking ID</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Bus Name</th>
+        <th>Bus Number</th>
+        <th>Total Seats</th>
+        <th>Total Cost</th>
+        <th>Booking Date</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of bookingWithBusDetails">
+        <td>{{ booking.BookingId }}</td>
+        <td>{{ booking.User?.Name || 'N/A' }}</td>
+        <td>{{ booking.User?.Email || 'N/A' }}</td>
+        <td>{{ booking.Bus?.BusName || 'N/A' }}</td>
+        <td>{{ booking.Bus?.BusNumber || 'N/A' }}</td>
+        <td>{{ booking.TotalSeats }}</td>
+        <td>{{ booking.TotalCost }}</td>
+        <td>{{ booking.BookingDate | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+        <td><i class="fa fa-trash red-icon fa-lg" (click)="delRecord(booking.BookingId)"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

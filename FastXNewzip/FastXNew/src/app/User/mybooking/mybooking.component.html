@@ -1,0 +1,40 @@
+<div *ngIf="bookings.length > 0">
+  <h2>My Bookings</h2>
+  <table class="table  table-striped">
+    <thead>
+      <tr>
+        <th>Booking ID</th>
+        <th>User Name</th>   
+        <th>Seat Numbers</th>
+        <th>Total Cost</th>
+        <th>Booking Date</th>
+        <th>Bus Name</th> 
+        <th>Bus Number</th> 
+        <th>Pickup Point</th> 
+        <th>Drop Point</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let booking of bookings.slice().reverse(); let i = index">
+        <tr>
+          <td>{{ booking.BookingId }}</td>   
+          <td>{{ booking.User.Name }}</td>    
+          <td>{{ booking.SeatNumbers }}</td>
+          <td>{{ booking.TotalCost }}</td>
+          <td>{{ booking.BookingDate | date:'medium' }}</td>
+          <td>{{ booking.Bus.BusName }}</td> 
+          <td>{{ booking.Bus.BusNumber }}</td> 
+          <td>{{ booking.Bus.PickUp }}</td> 
+          <td>{{ booking.Bus.DropPoint }}</td>
+         
+          
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="bookings.length === 0">
+  <h1 class="no-bookings">No bookings found.</h1>
+  <button class="button btn-primary button" (click)="navigateToBooking()">Book Now</button>
+</div>

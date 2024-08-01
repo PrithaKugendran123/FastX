@@ -1,0 +1,22 @@
+.custom-navbar {
+  
+    background-color: rgba(244, 110, 61, 0.925); 
+    margin-bottom: 30px;
+    color:white;
+    font-weight: bolder;
+}
+.font {
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff; /* Set the text color to white or any other bright color */
+}
+.custom{
+    color:white;
+    font-style: bold;
+    font-weight: bolder;
+    padding-top: 13px;
+}
+.images{
+    padding-left: 300px;
+    height: 600px;
+}

@@ -1,0 +1,35 @@
+<div *ngIf="bookings && bookings.length > 0">
+    <h2>Bookings List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Booking ID</th>
+          <th>Total Seats</th>
+          <th>Total Cost</th>
+          <th>Seat Numbers</th>
+          <th>Booking Date</th>
+          <th>Bus</th>
+          <th>User</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let booking of bookings">
+          <td>{{ booking.BookingId }}</td>
+          <td>{{ booking.TotalSeats }}</td>
+          <td>{{ booking.TotalCost }}</td>
+          <td>{{ booking.SeatNumbers }}</td>
+          <td>{{ booking.BookingDate }}</td>
+          <td>{{ booking.Bus?.BusName }}</td>
+          <td>{{ booking.User?.Name }}</td>
+          <td>
+            <button (click)="deleteBooking(booking.BookingId)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="!bookings || bookings.length === 0">
+    <p>No bookings found.</p>
+  </div>
+  

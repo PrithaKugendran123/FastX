@@ -1,0 +1,59 @@
+/* booking.component.css */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color:  rgba(244, 110, 61, 0.925);
+    color: white; 
+  }
+  .delete-button{
+    background-color: lightcoral;
+    color:red;
+    border: 1px solid red;
+  }
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2; 
+  }
+  
+  tbody tr:hover {
+    background-color: #ddd; 
+  }
+  
+  
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 30px; 
+  margin-left: 40px;
+  margin-right: 40px;
+ 
+}
+
+.table-wrapper table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.textt{
+  color:coral;
+  padding-left: 550px;
+  padding-bottom: 5px;
+  padding-top: 20px;
+}
+
+  
+  @media (max-width: 600px) {
+    th, td {
+      font-size: 12px;
+    }
+  }
+  

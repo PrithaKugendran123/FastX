@@ -1,0 +1,49 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading panel">
+                        <h3 class="pt-3 font-weight-bold textt">Sign Up</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="customerForm" (ngSubmit)="register()">
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="customerForm.controls['Name'].dirty && customerForm.hasError('required','Name')"> <span class="fa fa-user p-2"></span> <input formControlName="Name" type="text" placeholder="Name"> </div>
+                            </div>
+                            <small *ngIf="customerForm.controls['Name'].dirty && customerForm.hasError('required','Name')" class="text-danger">*Name is required*</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="customerForm.controls['Gender'].dirty && customerForm.hasError('required','Gender')"> <span class="fa fa-user p-2"></span> <input formControlName="Gender" type="text" placeholder="Gender"> </div>
+                            </div>
+                            <small *ngIf="customerForm.controls['Gender'].dirty && customerForm.hasError('required','Gender')" class="text-danger">*Gender is required*</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="customerForm.controls['ContactNumber'].dirty && customerForm.hasError('required','ContactNumber')"> <span class="fa fa-user p-2"></span> <input formControlName="ContactNumber" type="text" placeholder="ContactNumber"> </div>
+                            </div>
+                            <small *ngIf="customerForm.controls['ContactNumber'].dirty && customerForm.hasError('required','ContactNumber')" class="text-danger">*ContactNumber is required*</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="customerForm.controls['Address'].dirty && customerForm.hasError('required','Address')"> <span class="fa fa-user p-2"></span> <input formControlName="Address" type="text" placeholder="Address"> </div>
+                            </div>
+                            <small *ngIf="customerForm.controls['Address'].dirty && customerForm.hasError('required','Address')" class="text-danger">*Address is required*</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="customerForm.controls['Email'].dirty && customerForm.hasError('required','Email')"> <span class="fa fa-user p-2"></span> <input formControlName="Email" type="text" placeholder="Email"> </div>
+                            </div>
+                            <small *ngIf="customerForm.controls['Email'].dirty && customerForm.hasError('required','Email')" class="text-danger">*Email is required*</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="customerForm.controls['Password'].dirty && customerForm.hasError('required','Password')"> <span class="fa fa-lock px-2"></span> <input formControlName="Password" [type]="type"   placeholder="Password"> <button (click)="hideShowPass()" type="button" class="bg-white text-muted"> <span class="fa {{eyeIcon}}"></span> </button>                                    </div>
+                            </div>
+                            <small *ngIf="customerForm.controls['Password'].dirty && customerForm.hasError('required','Password')" class="text-danger">*Password is required*</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="customerForm.controls['RePassword'].dirty && customerForm.hasError('required','RePassword')"> <span class="fa fa-lock px-2"></span> <input formControlName="RePassword" [type]="type" placeholder="RePassword"> <button (click)="hideShowPass()" type="button" class="bg-white text-muted"> <span class="fa {{eyeIcon}}"></span> </button>                                    </div>
+                            </div>
+                            <small *ngIf="customerForm.controls['RePassword'].dirty && customerForm.hasError('required','RePassword')" class="text-danger">*Password is required*</small>
+                            
+                            <button type="submit" class="btn btn-danger btn-block mt-4 w-100">Signup</button>
+                            <div class="text-center pt-4 text-muted">Already have an account? <a id="forgot" routerLink="/login" href="#">Login</a> </div>
+                        </form>
+                    </div>
+  
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

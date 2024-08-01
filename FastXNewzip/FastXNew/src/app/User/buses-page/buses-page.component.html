@@ -1,0 +1,139 @@
+<div class="container mt-5">
+  <h2>Available Buses for this Route </h2>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="filter-box">
+          <h4>Filters</h4>
+          <div class="filter-container">
+            <label for="busTypeFilter" class="bustype">Bus Type:</label>
+            <select id="busTypeFilter" [(ngModel)]="busTypeFilter" (change)="applyFilters()" class="form-select">
+              <option value="">All</option>
+              <option value="AC">AC</option>
+              <option value="Non-AC">Non-AC</option>
+            </select>
+          </div>
+          
+          <div class="filter-container">
+            <label for="seatTypeFilter" class="seattype">Seat Type:</label>
+            <select id="seatTypeFilter" [(ngModel)]="seatTypeFilter" (change)="applyFilters()" class="form-select">
+              <option value="">All</option>
+              <option value="Sleeper">Sleeper</option>
+              <option value="Chair">Semi-Sleeper</option>
+              <!-- Add other seat types as options -->
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+  <!-- Display filtered buses -->
+  <div *ngIf="!noBusesFound && availableBuses.length > 0">
+    <ul>
+      <li *ngFor="let bus of filteredBuses" class="bus-box">
+        <div class="bus-details-box bus-listings-box">
+          
+          <p>
+            <strong>{{ bus.BusName }}</strong> &nbsp;
+            <strong>Capacity:</strong> {{ bus.NumberOfSeats }} Seats &nbsp;
+            <strong>Seat Type:</strong> {{ bus.SeatType}} &nbsp;
+            <strong>Bus Type:</strong> {{ bus.BusType }}
+          </p>
+          <p>
+            <strong>Pickup Point:</strong> {{ bus.PickUp }} &nbsp;
+            <strong>Drop point:</strong> {{ bus.DropPoint }}
+          </p>
+          
+          <p><strong>Available Amenities:</strong>
+            <span *ngIf="bus.WaterBottle" title="Water Bottle">
+              <img src="assets/images/bottle.png" alt="Water Bottle" style="width: 50px; height:40px;">
+            </span>
+            <span *ngIf="bus.Tv" title="TV">
+              <img src="assets/images/tv.png" alt="TV" style="width: 50px; height: 50px;">
+            </span>
+            <span *ngIf="bus.ChargingPoint" title="Charging Point">
+              <img src="assets/images/charging.png" alt="Charging Point" style="width: 60px; height: 70px;">
+            </span>
+          </p>
+          <p><strong>Fare:</strong> ₹1000</p>
+          <div class="dropdown mt-3">
+            <p class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+              View Bus Image
+            </p>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img [src]="constructImageUrl(bus.BusId)" alt="Bus Image" style="width: 250px; height: 150px;">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown mt-3 "> <!-- Added ms-3 for margin start -->
+            <p class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+              Travel Related Policies
+            </p>
+            <ul class="dropdown-menu" aria-labelledby="policiesDropdown">
+              <li><h6 class="dropdown-header">Child Passenger Policy</h6></li>
+              <li><p class="dropdown-item-text">Children above the age of 5 will need a ticket</p></li>
+              <li><div class="dropdown-divider"></div></li>
+              <li><h6 class="dropdown-header">Luggage Policy</h6></li>
+              <li><p class="dropdown-item-text">1 piece of luggage will be accepted free of charge per passenger. Excess items will be chargeable.</p></li>
+              <li><p class="dropdown-item-text">Excess baggage over 10 kgs per passenger will be chargeable.</p></li>
+              <li><div class="dropdown-divider"></div></li>
+              <li><h6 class="dropdown-header">Pets Policy</h6></li>
+              <li><p class="dropdown-item-text">Pets are not allowed.</p></li>
+              <li><div class="dropdown-divider"></div></li>
+              <li><h6 class="dropdown-header">Liquor Policy</h6></li>
+              <li><p class="dropdown-item-text">Carrying or consuming liquor inside the bus is prohibited. Bus operator reserves the right to deboard drunk passengers.</p></li>
+              <li><div class="dropdown-divider"></div></li>
+              <li><h6 class="dropdown-header">Pick up Time Policy</h6></li>
+              <li><p class="dropdown-item-text">Bus operator is not obligated to wait beyond the scheduled departure time of the bus. No refund request will be entertained for late arriving passengers.</p></li>
+            </ul>
+          </div>
+          
+          <div>
+           
+            
+           
+            <div class="button-container">
+              <button class="btn btn-primary" (click)="showSeatDropdown(bus)">Show Seats</button>
+            </div>
+          </div>
+
+          <!-- Available Seats -->
+          <div *ngFor="let bus of filteredBuses">
+           
+            <div class="seat-container">
+              <div *ngIf="bus.showStatusImages" class="status-images">
+                <img src="assets/images/bookseat.png" alt="Booked Seat Icon"> Booked Seat
+                <img src="assets/images/bseat.png" alt="Available Seat Icon"> Available Seat
+                <!-- <img src="assets/images/handle.png" alt="Additional Image" class="additional-image"> -->
+              </div>
+              <hr>
+            <div *ngFor="let seat of bus.Seats.$values" class="seat-box">
+              <div class="seat" 
+                   [class.disabled]="!seat.IsAvailable"
+                   [class.selected]="isSeatSelected(seat.SeatNumber)"
+                   (click)="toggleSeatSelection(seat.SeatNumber)">
+                <img [src]="isSeatSelected(seat.SeatNumber) ? 'assets/images/fseat.png' : (seat.IsAvailable ? 'assets/images/bseat.png' : 'assets/images/bookseat.png')"
+                     alt="Seat Image">
+                <p>Seat {{ seat.SeatNumber }}</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        
+          
+          
+<!-- Inside bus-details-box -->
+<div class="button-container-ticket" *ngIf="bus.seatsShown">
+  <button class="btn btn-success" [disabled]="!selectedSeat" (click)="bookTicket(bus, selectedSeat)">Book Ticket</button>
+</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="noBusesFound && filteredBuses.length === 0">
+    <p>No available buses for this route with this filter.</p>
+  </div>
+</div>
+</div>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Ticket Booking App</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    /* Custom Styles */
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #343a40 !important;
+    }
+
+    .carousel-item img {
+      height: 600px;
+      object-fit: cover;
+    }
+
+    .buy {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .block {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .info_right {
+      padding: 20px;
+    }
+
+    .info_right ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .info_right ul li {
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .info_right ul li i {
+      position: absolute;
+      left: -30px;
+      top: 5px;
+    }
+
+    .btn-outline-light {
+      color: #fff;
+      border-color: #fff;
+    }
+
+    .btn-outline-light:hover {
+      background-color: #fff;
+      color: #343a40;
+    }
+
+    .btn-outline-light:focus {
+      box-shadow: none;
+    }
+
+    .cities {
+  text-align: center;
+}
+
+.city-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.city-item {
+  margin: 10px;
+}
+
+.city-item img {
+  width: 100px; /* Adjust image width as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center align images */
+}
+
+.city-item h6 {
+  margin-top: 5px; /* Add margin between image and city name */
+}
+
+    .sslcommerz-logo {
+      margin-top: 30px; /* Add margin to the SSLCommerz logo */
+    }
+   
+  </style>
+</head>
+<body>
+ 
+
+
+  <!-- Carousel -->
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../../../assets/images/slider.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../../../assets/images/car2.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Content Section -->
+  <div class="container buy mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card card-body block">
+          <div id="why_buy">                            
+            <div class="info_right">
+              <h5 class="text-center mb-3">Why buy tickets from us?</h5>
+              <ul>
+                <li><i class="fas fa-check mr-2" style="color:#F69230;font-size:17px;"></i><b>Buy bus tickets</b> anytime from anywhere</li>
+                <li><i class="fas fa-check mr-2" style="color:#F69230;font-size:17px;"></i>Pay by credit card, mobile banking, or cash</li>
+                <li><i class="fas fa-check mr-2" style="color:#F69230;font-size:17px;"></i>Get tickets delivered to your doorstep</li>
+                <li><i class="fas fa-check mr-2" style="color:#F69230;font-size:17px;"></i>Dependable customer service <b>(8 AM to 11 PM)</b></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cities">
+      <h3 class="text-center">FastX Cities</h3>
+      <div class="city-container">
+        <div class="city-item">
+          <img src="../../../assets/images/chennai.png" class="city-image" alt="...">
+          <h6 class="text-center">Chennai</h6>
+        </div>
+        <div class="city-item">
+          <img src="../../../assets/images/bhopal.png" class="city-image" alt="...">
+          <h6 class="text-center">Bhopal</h6>
+        </div>
+        <div class="city-item">
+          <img src="../../../assets/images/delhi.png" class="city-image" alt="...">
+          <h6 class="text-center">Delhi</h6>
+        </div><div class="city-item">
+          <img src="../../../assets/images/nagpur.png" class="city-image" alt="...">
+          <h6 class="text-center">Nagpur</h6>
+        </div>
+        <div class="city-item">
+          <img src="../../../assets/images/mumbai-2.png" class="city-image" alt="...">
+          <h6 class="text-center">Mumbai</h6>
+        </div>
+        <div class="city-item">
+          <img src="../../../assets/images/kochi.png" class="city-image" alt="...">
+          <h6 class="text-center">Kochi</h6>
+        </div>
+      </div>
+    </div>
+    <div class="container buy mt-5">
+      <h3 class="text-center mb-4">How to Book Bus Tickets Online on FastX</h3>
+      <ol>
+        <li>Enter the Origin city and Destination city details in the “From” and “Station” fields respectively</li>
+        <li>Select the “Journey date” from calendar icon and click on the “Search” button</li>
+        <li>Select any bus of your choice from the list of buses which are displayed </li>        
+        <li>Check the Booking ticket information</li>
+        <li>Select a seat “Continue to payment”</li>
+        <li>Complete the payment process by selecting your preferred mode of payment</li>
+        <li>Once the payment process is done, you will receive an M-ticket on your mobile via SMS, WhatsApp message and an e-ticket on email ID provided at “Enter Contact Details” field.</li>
+      </ol>
+    </div>
+    <div class="row pt-5 justify-content-center sslcommerz-logo">
+      <img src="../assets/images/sslcommerz_logo.png" class="img-fluid" alt="">
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
