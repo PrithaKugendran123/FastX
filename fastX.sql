@@ -181,15 +181,14 @@ VALUES(1008,1,1),(1009,2,1),(10,3,1),(1,4,1),(1,5,1),(1,6,1),(1,7,1),(1,8,1),(1,
 
 
 INSERT INTO Seats(BusId,SeatNumber,IsAvailable)
-VALUES(17,1,1),(17,2,0),(17,3,0),(17,4,1),(17,5,0),(17,6,1),(17,7,0),(17,8,0),(17,9,1),(17,10,1),
-(17,11,1),(17,12,1),(17,13,1),(17,14,1),(17,15,1),(17,16,1),(17,17,1),(17,18,1),(17,19,1),(17,20,1)
+VALUES(4,1,1),(4,2,0),(4,3,0),(4,4,1),(4,5,0),(4,6,1),(4,7,0),(4,8,0),(4,9,1),(4,10,1),(2,11,1),(2,12,1),(2,13,1),(2,14,1),(2,15,1),(2,16,1),(2,17,1),(2,18,1),(2,19,1),(2,20,1)
 
 INSERT INTO Seats(BusId,SeatNumber,IsAvailable)
 VALUES(3,1,1),(3,2,1),(3,3,1),(3,4,1),(3,5,1),(3,6,1),(3,7,1),(3,8,1),(3,9,1),(3,10,1),(3,11,1),(3,12,1),(3,13,1),(3,14,1),(3,15,1),(3,16,1),(3,17,1),(3,18,1),(3,19,1),(3,20,1)
 
 INSERT INTO Buses(RouteID,OperatorID,BusName,BusNumber,SeatType,BusType,NumberOfSeats,PickUp,DropPoint,WaterBottle,ChargingPoint,TV,Blanket)
 VALUES
-(26,5,'Parveen Travels','MA-01-76PP','Sleeper','AC',20,'Delhi','Kochi',1,1,1,1),
+(18,5,'Palani Travels','MH-01-76PP','Sleeper','AC',20,'Mumbai','Bhopal',1,1,1,1),
 (19,10,'Deva Travels','DL-01-24R5','Chair','Non-Ac',30,'Mumbai','Kochi',0,1,0,1),
 (20,11,'Kumaran Travels','DL-02-32Y5','Chair','AC',20,'Chennai','Bhopal',0,0,1,1),
 (21,6,'Jeevan Travels','DL-01-21R5','Sleeper','Non-AC',20,'Chennai','Nagpur',1,1,1,0)
